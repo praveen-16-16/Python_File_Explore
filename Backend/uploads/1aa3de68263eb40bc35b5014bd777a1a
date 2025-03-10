@@ -1,0 +1,10 @@
+import os
+
+def auto_shutdown():
+    print("Shutting down system immediately...")
+    if os.name == 'nt':  # Windows
+        os.system("shutdown /s /t 0")
+    else:  # Linux and macOS
+        os.system("shutdown -h now")
+
+auto_shutdown()
